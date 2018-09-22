@@ -44,7 +44,7 @@ RUN chown ees /etc/ees/ees.conf
 # Mount /var/lib/ees to allow restoring filestore and /mnt/extra-addons for users addons
 RUN mkdir -p /mnt/extra-addons \
         && chown -R ees /mnt/extra-addons
-VOLUME ["/var/lib/ees", "/mnt/extra-addons"]
+VOLUME ["/usr/lib/python2.7/dist-packages/odoo", "/var/lib/ees", "/mnt/extra-addons"]
 
 # Expose Odoo services
 EXPOSE 8069 8071
